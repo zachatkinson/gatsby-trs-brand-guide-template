@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 512 512">
+  <g fill="none" fill-rule="evenodd" class="icon-menu">
+    <path class="icon-color" fill="#FFF" d="M256,0 C397.384896,0 512,114.615104 512,256 C512,397.384896 397.384896,512 256,512 C114.615104,512 0,397.384896 0,256 C0,114.615104 114.615104,0 256,0 Z M256,21 C126.213084,21 21,126.213084 21,256 C21,385.786916 126.213084,491 256,491 C385.786916,491 491,385.786916 491,256 C491,126.213084 385.786916,21 256,21 Z"/>
+    <circle class="icon-bg" cx="256" cy="256" r="235"/>
+    <rect class="icon-color hamburger-top" width="193" height="22" x="160" y="160" fill="#FFF"/>
+    <rect class="icon-color hamburger-middle" width="193" height="22" x="160" y="245" fill="#FFF"/>
+    <rect class="icon-color hamburger-bottom" width="193" height="22" x="160" y="330" fill="#FFF"/>
+
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+.color-swatch {
+  margin: 1rem;
+  flex-grow: 1;
+  font-size: 0.8rem;
+}
+.color-swatch .color-visual {
+  width: 100%;
+  min-height: 150px;
+  border: 1px solid #000;
+}
+
+/*# sourceMappingURL=color-swatch.css.map */

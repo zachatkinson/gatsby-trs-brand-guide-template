@@ -1,0 +1,11 @@
+.quote-image {
+  color: white;
+  padding: 2rem;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.quote-image cite {
+  float: right;
+}
+
+/*# sourceMappingURL=fancy-quotes.css.map */

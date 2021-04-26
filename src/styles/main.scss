@@ -1,0 +1,180 @@
+@use './variables.min.css';
+*{
+  font-family: var(--main-font);
+}
+
+.icon-menu{
+  .icon-bg{
+    fill: var(--blue-phillys);
+  }
+  .icon-color{
+    fill: var(--white);
+  }
+  &:hover{
+    .icon-bg{
+      fill: var(--orange-phillys);
+      transition: fill 0.5s ease-out;
+    }
+  }
+  &:active{
+   .icon-bg{
+     fill: var(--orange-phillys);
+   }
+    .hamburger-top{
+      animation: top-bar 1s forwards 1;
+      transform-origin: 50% 50%;
+
+    }
+
+    .hamburger-middle{
+      fill: transparent;
+      transition: fill 0.5s ease-out;
+
+    }
+    .hamburger-bottom{
+      animation: bottom-bar 1s forwards 1;
+      transform-origin: 50% 50%;
+    }
+  }
+}
+
+@keyframes top-bar{
+  0%{
+    transform: rotate(0deg);
+
+  }
+  50%{
+    transform: translateY(85px);
+  }
+
+  100%{
+    transform: rotateZ(135deg) translateY(85px);
+
+  }
+}
+@keyframes bottom-bar{
+  0%{
+    transform: rotate(0deg);
+
+  }
+  50%{
+    transform: translateY(-85px);
+  }
+
+  100%{
+    //transform: rotateZ(135deg);
+    transform: rotateZ(45deg) translateY(-85px);
+  }
+}
+
+.site-header{
+  background: var(--blue-phillys);
+  margin-bottom: 1.45rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo-outer{
+  fill: var(--white);
+}
+#logo-inner{
+  fill: var(--black);
+}
+.site-header{
+    #logo-outer{
+      fill: var(--white);
+    }
+    #logo-inner{
+      fill: var(--orange-phillys);
+    }
+}
+.nav-link, h1, h2, h3, h4, h5, h6{
+  font-family: var(--main-font);
+  font-weight: normal;
+  text-transform: uppercase;
+  strong{
+    font-weight: bold;
+  }
+  em{
+    font-style: italic;
+  }
+}
+h1, h2, h3, h4, h5, h6{
+  text-transform: uppercase;
+}
+
+.swatch-list{
+  display: flex;
+  margin-bottom: 2rem;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+}
+.rule-list{
+  display: flex;
+  margin-bottom: 2rem;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @media only screen and (max-width: 600px){
+    flex-direction: column;
+  }
+
+}
+.bm-icon{
+    &:hover{
+      .icon-bg{
+      fill: var(--orange-phillys);
+    }
+  }
+}
+.color-header{
+  margin-bottom: 0px;
+}
+.typography-wrap{
+  display: flex;
+  @media only screen and (max-width: 600px){
+    flex-direction: column;
+  }
+  .typography-description{
+    flex-grow: 1;
+    margin: 1rem;
+    flex-basis: 50%;
+  }
+  .typography-display{
+    margin: 1rem;
+    flex-grow: 2;
+  }
+}
+.logo-info{
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  .logo-title{
+    margin-bottom: 0px;
+  }
+  .sample-wrap{
+    display: flex;
+    justify-content: center;
+    #logo-sample{
+      width: 100%;
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+
+      #logo-inner{
+        fill: var(--orange-phillys);
+      }
+      #logo-outer{
+        fill: var(--blue-phillys);
+      }
+    }
+  }
+
+
+}
+.spacer-sample{
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+

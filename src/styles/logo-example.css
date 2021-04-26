@@ -1,0 +1,17 @@
+.rule-title {
+  margin-bottom: 0px;
+  margin-top: 0.5rem;
+}
+
+.rule-hr {
+  margin-bottom: 0.5rem;
+}
+
+.logo-example {
+  flex-grow: 1;
+  margin: 1rem;
+  flex-basis: 0;
+  min-width: 45%;
+}
+
+/*# sourceMappingURL=logo-example.css.map */

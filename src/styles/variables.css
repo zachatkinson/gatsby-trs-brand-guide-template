@@ -1,0 +1,26 @@
+:root {
+  /*COLORS */
+  /*Orange Tones*/
+  --orange-tenne: #bf4d00;
+  --orange-phillys: #ff6600;
+  --orange-saddlebrown: #803300;
+  --orange-brownpod: #401a00;
+  --orange-persimmon: #e65c00;
+  /*Blue Tones*/
+  --blue-cobalt: #004dbf;
+  --blue-darkcerulean: #003380;
+  --blue-phillys: #0066ff;
+  --blue-tangaroa: #001a40;
+  --blue-navy: #005ce6;
+  /*Greyscale Tones*/
+  --white: #ffffff;
+  --dark-grey: #332e30;
+  --light-grey: #cccccc;
+  --black: #000000;
+  /*END COLORS*/
+  /*TYPOGRAPHY*/
+  --main-font: Futura, Helvetica, Arial, sans-serif;
+  /*END TYPOGRAPHY*/
+}
+
+/*# sourceMappingURL=variables.css.map */
