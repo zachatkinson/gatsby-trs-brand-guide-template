@@ -41,7 +41,7 @@ const Image = ({src, ...rest}) => {
   }
   const { node: { childImageSharp, publicURL, extension } = {} } = match
   if (extension === 'svg' || !childImageSharp) {
-    return <img src={publicURL} {...rest} alt={``} />
+    return <img src={publicURL} {...rest} alt={``} height={`auto`} />
   }
   return <GatsbyImage image={childImageSharp.gatsbyImageData} {...rest} />;
 }

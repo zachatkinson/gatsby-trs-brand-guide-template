@@ -9,7 +9,7 @@ const SideBar = ({menuLinks}) => {
         <Menu customBurgerIcon={<Icon />}  pageWrapId={ `page-wrap` } outerContainerId={ `outer-container` }>
             <Logo className={`logo-test`}/>
             {menuLinks.map( link => (
-                <Link className={`nav-link`} to={link.link}>
+                <Link className={`nav-link`} to={link.link} key={link.name}>
                     {link.name}
                 </Link>
             ))}

@@ -74,14 +74,14 @@ const LogoPage = () => (
             <hr/>
             <div className={`rule-list`}>
             {Dos.map(example => (
-                <LogoExample desription={example.description} src={example.src} alt={example.alt} rule={example.rule} />
+                <LogoExample desription={example.description} src={example.src} alt={example.alt} rule={example.rule} key={example.rule} />
             ))}
             </div>
             <h2 className={`logo-title`}><strong>Don't</strong></h2>
             <hr/>
             <div className={`rule-list`}>
             {Donts.map(example => (
-                <LogoExample desription={example.description} src={example.src} alt={example.alt} rule={example.rule} />
+                <LogoExample desription={example.description} src={example.src} alt={example.alt} rule={example.rule} key={example.rule} />
             ))}
             </div>
         </div>
