@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
+import {GatsbyImage} from 'gatsby-plugin-image'
 import PropTypes from 'prop-types';
 
 /*
@@ -15,24 +15,21 @@ import PropTypes from 'prop-types';
  */
 
 const Image = ({src, ...rest}) => {
-  const data = useStaticQuery(graphql`
-    query {
-      images: allFile(filter: {internal: {}, dir: {regex: "/images/"}}) {
-        edges {
-          node {
-            relativePath
-            extension
-            publicURL
-            childImageSharp {
-              fluid(maxWidth: 1200) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
+  const data = useStaticQuery(graphql`{
+  images: allFile(filter: {internal: {}, dir: {regex: "/images/"}}) {
+    edges {
+      node {
+        relativePath
+        extension
+        publicURL
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH)
         }
       }
     }
-  `);
+  }
+}
+`);
 
   const match = useMemo(
       () => data.images.edges.find(({node}) => src === node.relativePath),
@@ -46,7 +43,7 @@ const Image = ({src, ...rest}) => {
   if (extension === 'svg' || !childImageSharp) {
     return <img src={publicURL} {...rest} alt={``} />
   }
-  return <Img fluid={childImageSharp.fluid} {...rest} />
+  return <GatsbyImage image={childImageSharp.gatsbyImageData} {...rest} />;
 }
 export default Image
 

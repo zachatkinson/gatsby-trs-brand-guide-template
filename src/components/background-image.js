@@ -17,19 +17,16 @@ import BackgroundImage from 'gatsby-background-image'
  */
 
 const BackgroundSection = ({className}) => {
-    const data = useStaticQuery(graphql`
-        query {
-            image: file(relativePath: { eq: "air-grab.jpg" }) {
-                childImageSharp {
-                    fluid(maxWidth: 1200,   quality: 90) {
-                        ...GatsbyImageSharpFluid
-                    }
-                }
-            }
-        }
-    `)
+    const data = useStaticQuery(graphql`{
+  image: file(relativePath: {eq: "air-grab.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(quality: 90, layout: FULL_WIDTH)
+    }
+  }
+}
+`)
 
-    if (!data?.image?.childImageSharp?.fluid) {
+    if (!data?.image?.childImageSharp?.gatsbyImageData) {
         return <div>Background image not found</div>
     }
 
@@ -37,12 +34,12 @@ const BackgroundSection = ({className}) => {
         <BackgroundImage
             Tag="section"
             className={`bg-img ` + className}
-            fluid={data.image.childImageSharp.fluid}
+            fluid={data.image.childImageSharp.gatsbyImageData}
             backgroundColor={`#ffffff`}
         >
             <h2>I see people with talent and all those things, but the one thing they don't have is just that love for the sake of doing it</h2>
         </BackgroundImage>
-    )
+    );
 }
 
 const StyledBackgroundSection = styled(BackgroundSection)`

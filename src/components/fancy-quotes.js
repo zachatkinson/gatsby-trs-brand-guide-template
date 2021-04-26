@@ -18,26 +18,23 @@ import BackgroundImage from 'gatsby-background-image'
 
 const BackgroundSection = (props, {className}) => {
     const data = useStaticQuery(
-        graphql`
-            query {
-                placeholderImage: allFile(
-                    filter: { sourceInstanceName: { eq: "images" } }
-                ) {
-                    edges {
-                        node {
-                            relativePath
-                            childImageSharp {
-                                fluid(maxWidth: 1200, quality: 100, duotone: { highlight: "#0066ff", shadow: "#ff6600"})
-                                    {
-                                    ...
-                                GatsbyImageSharpFluid_withWebp
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        `
+        graphql`{
+  placeholderImage: allFile(filter: {sourceInstanceName: {eq: "images"}}) {
+    edges {
+      node {
+        relativePath
+        childImageSharp {
+          gatsbyImageData(
+            quality: 100
+            transformOptions: {duotone: {highlight: "#0066ff", shadow: "#ff6600"}}
+            layout: FULL_WIDTH
+          )
+        }
+      }
+    }
+  }
+}
+`
     );
     const image = data.placeholderImage.edges.find(
         ({ node }) => node.relativePath === props.filename
@@ -50,13 +47,13 @@ const BackgroundSection = (props, {className}) => {
         <BackgroundImage
             Tag="blockquote"
             className={`quote-image ` + className}
-            fluid={image.childImageSharp.fluid}
+            fluid={image.childImageSharp.gatsbyImageData}
             backgroundColor={props.bgColor}
         >
             <h2>{props.quote}</h2>
             <cite><strong>{props.author}</strong></cite>
         </BackgroundImage>
-    )
+    );
 }
 
 const StyledBlockquote = styled(BackgroundSection)`
