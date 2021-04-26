@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Logo from "../svg/logo.inline.svg"
 import Spacer from "../svg/spacer-demo.inline.svg"
 import LogoExample from "../components/logo-example";
@@ -45,7 +45,7 @@ const Donts = [
 
 const LogoPage = () => (
     <Layout>
-        <SEO title="Logo"/>
+        <Seo title="Logo"/>
         <h1><strong>Brand Logo</strong></h1>
         <div className={`logo-info`}>
             <h2 className={`logo-title`}><strong>Our Logotype</strong></h2>

@@ -3,12 +3,12 @@ import React from "react"
 
 import Layout from "../components/layout"
 
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import StyledBlockquote from "../components/fancy-quotes";
 
 const MissionPage = () => (
     <Layout>
-        <SEO title="Mission Statement"/>
+        <Seo title="Mission Statement"/>
         <h1><strong>Mission Statement</strong></h1>
         <p>Being skaters ourselves, we know that the customization of a complete skateboard is what truly identifies us
             from others. With never ending colours, brands and graphics available in decks, wheels, trucks, bearings,

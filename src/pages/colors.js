@@ -2,7 +2,7 @@ import React from "react"
 
 import ColorSwatch from "../components/color-swatch";
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const primaryColors = [
     {
@@ -187,7 +187,7 @@ const grayScale = [
 const ColorsPage = () => (
 
     <Layout>
-        <SEO title="Brand Colors" />
+        <Seo title="Brand Colors" />
         <h1><strong>Brand Colors</strong></h1>
         <h2 className={`color-header`}><strong>Primary Colors</strong></h2>
         <hr />

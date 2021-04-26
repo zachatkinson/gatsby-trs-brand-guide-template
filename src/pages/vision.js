@@ -2,11 +2,11 @@ import React from "react"
 import Layout from "../components/layout"
 
 import StyledBlockquote from "../components/fancy-quotes";
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const VisionPage = () => (
     <Layout>
-        <SEO title="Vision Statement"/>
+        <Seo title="Vision Statement"/>
         <h1><strong>Vision Statement</strong></h1>
         <p>For decades, skateboard hardware has been a side product for many brands. These brands offer hardware as a
             way to complement their main product. At Philly’s, our goal is to perfect hardware as much as possible from

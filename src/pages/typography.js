@@ -1,7 +1,7 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import FontSwatch from "../components/font-swatch"
 
 /*Input Font Family Data Here, if you have multiple families
@@ -27,7 +27,7 @@ const mainFonts = [
 
 const TypePage = () => (
     <Layout>
-        <SEO title="Typography"/>
+        <Seo title="Typography"/>
         <h1><strong>Typography</strong></h1>
         <div className={`typography-wrap`}>
             <div className={`typography-description`}>

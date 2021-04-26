@@ -3,11 +3,11 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const TonePage = () => (
     <Layout>
-        <SEO title="Brand Tone" />
+        <Seo title="Brand Tone" />
         <h1><strong>Brand Tone</strong></h1>
         <p>Welcome to your new Gatsby site.</p>
         <p>Now go build something great.</p>
